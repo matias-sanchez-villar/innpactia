@@ -1,0 +1,25 @@
+<app-menu></app-menu>
+<div class="container p-4">
+  <table class="table mx-auto table-striped table-primary">
+    <thead>
+      <tr>
+        <th class="text-center">Nombre</th>
+        <th class="text-center">Apellido</th>
+        <th class="text-center"></th>
+        <th class="text-center"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cliente of cliente">
+        <td class="text-center">{{ cliente.nombre }}</td>
+        <td class="text-center">{{ cliente.apellido }}</td>
+        <td class="text-center">
+          <button class="btn btn-secondary" (click)="verTelefonos(cliente)">Ver Teléfonos</button>
+        </td>
+        <td class="text-center">
+          <button class="btn btn-success" (click)="agregarTelefonos(cliente)">Agregar Teléfonos</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,28 @@
+<app-menu></app-menu>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container p-4">
+    <span class="navbar-brand mb-0 h4 mx-auto">Cliente: {{cliente.nombre}}, {{cliente.apellido}}</span>
+  </div>
+</nav>
+<div class="container p-4">
+  <table class="table mx-auto table-striped table-primary">
+    <thead>
+      <tr>
+        <th class="text-center">Numero</th>
+        <th class="text-center"></th>
+        <th class="text-center"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let telefono of telefono">
+        <td class="text-center">{{ telefono.numero }}</td>
+        <td class="text-center">
+          <button class="btn btn-secondary" (click)="verReparaciones(telefono.numero)">Ver reparaciones</button>
+        </td>
+        <td class="text-center">
+          <button class="btn btn-success" (click)="agregarReparacione(telefono.numero)">Agregar reparaciones</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

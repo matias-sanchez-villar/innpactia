@@ -1,0 +1,33 @@
+<app-menu></app-menu>
+<div class="container h-100 p-3">
+    <div class="row justify-content-center align-items-center h-100">
+      <div class="col-lg-4 col-md-6 col-sm-8">
+        <div class="card">
+          <div class="card-body bg-primary-subtle">
+            <h5 class="card-title text-center mb-4 h2">Agregar reparacions</h5>
+            <form (ngSubmit)="onSubmit()">
+              <div class="form-group">
+                <label for="text" class="p-1">Titulo</label>
+                <input type="text" class="form-control p-1" id="titulo" name="titulo" [(ngModel)]="titulo" placeholder="Ingrese su titulo" required>
+              </div>
+              <div class="form-group">
+                <label for="text" class="p-1">Descripcion</label>
+                <input type="text" class="form-control p-1" id="descripcion" name="descripcion" [(ngModel)]="descripcion" placeholder="Ingrese su descripcion" required>
+              </div>
+              <div class="form-group">
+                <label for="text" class="p-1">Fecha</label>
+                <input type="date" class="form-control p-1" id="fecha" name="fecha" [(ngModel)]="fecha" placeholder="Ingrese su fecha" required>
+              </div>
+              <button type="submit" class="btn btn-success btn-block mt-4">Enviar</button>
+              <div *ngIf="loginError" class="alert alert-danger mt-3" role="alert">
+                Error Por favor, inténtalo de nuevo.
+              </div>
+              <div *ngIf="dataOK" class="alert alert-info mt-3" role="alert">
+                Reparacion registrada con exito.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

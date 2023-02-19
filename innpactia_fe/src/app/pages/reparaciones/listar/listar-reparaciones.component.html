@@ -1,0 +1,21 @@
+<app-menu></app-menu>
+<div class="container p-4">
+  <table class="table mx-auto table-striped table-primary">
+      <thead>
+        <tr>
+          <th class="text-center">Telefono</th>
+          <th class="text-center">Titulo</th>
+          <th class="text-center">Descripcion</th>
+          <th class="text-center">Fecha</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let reparacion of reparaciones">
+          <td class="text-center">{{ reparacion.idTelefono }}</td>
+          <td class="text-center">{{ reparacion.titulo }}</td>
+          <td class="text-center">{{ reparacion.descripcion }}</td>
+          <td class="text-center">{{ reparacion.fecha }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
