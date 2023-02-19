@@ -39,7 +39,6 @@ export class AgregarReparacionesComponent {
   data(){
     const data = JSON.parse(localStorage.getItem("cliente") || '{}');
     let telefono = this.activeRoruter.snapshot.paramMap.get("numero");
-    console.log(telefono, data)
     if(!Object.entries(data).length || !telefono) this.router.navigate(["/"]);
     this.idCliente = data.cliente.id;
     this.idTelefono = "" + telefono;

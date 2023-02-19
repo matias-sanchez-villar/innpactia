@@ -26,7 +26,6 @@ export class ReparacionesTelefonoComponent {
   ngOnInit() {
     const token = localStorage.getItem('token');
     if (!token) {
-      console.log(token, !token)
       this.router.navigate(['/']);
     }
     this.data();

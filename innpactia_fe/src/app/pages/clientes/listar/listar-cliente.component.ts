@@ -33,7 +33,6 @@ export class ListarClienteComponent {
   service() {
     this.clienteService.getList().subscribe(
       (data: Cliente[]) => {
-        console.log(data)
         this.cliente = data;
       },
       (error: any) => {

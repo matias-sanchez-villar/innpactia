@@ -40,7 +40,7 @@ export class AgregarTelefonoComponent {
       idCliente: this.idCliente,
       numero: this.numero
     };
-    this.telefonoService.getTelefono_Cliente(this.telefono).subscribe(
+    this.telefonoService.setTelefono(this.telefono).subscribe(
       (data: any) => {
         this.dataOK = true;
       },

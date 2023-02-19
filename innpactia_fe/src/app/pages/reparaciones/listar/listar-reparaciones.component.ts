@@ -33,7 +33,6 @@ export class ListarReparacionesComponent {
   service() {
     this.reparacionesService.getList().subscribe(
       (data: Reparacion[]) => {
-        console.log(data);
         this.reparaciones = data;
       },
       (error: any) => {
