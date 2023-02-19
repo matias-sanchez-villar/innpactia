@@ -16,7 +16,6 @@ export const telefonos_clientes = async (req, res) =>{
 export const create = async (req, res) =>{
     try{
         const {numero, idCliente} = req.body;
-        console.log(numero, idCliente)
         const exist = await connection.query(
             "SELECT * FROM telefonos_clientes where numero = ?;",
             idCliente

@@ -16,7 +16,6 @@ app.use("/api/telefonos", telefonos);
 app.use("/api/usuario", usuario);
 
 app.use("*", (req, res) => {
-    console.log(req)
     res.status(200).json("Bienvenido a innpactia")
 })
 

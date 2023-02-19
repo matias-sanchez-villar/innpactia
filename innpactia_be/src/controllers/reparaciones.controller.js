@@ -25,14 +25,13 @@ export const reparaciones_telefono = async (req, res) =>{
 export const create = async (req, res) =>{
     try{
         const {idTelefono, titulo, descripcion, fecha} = req.body;
-        console.log(idTelefono, numero, titulo, descripcion, typeof fecha)
         const exist = await connection.query(
             "SELECT * FROM telefonos_clientes where id = ?;",
             idTelefono
         );
         if(!exist.length) return res.status(404).json({error: "Error al insertar el numero de telefono, reintente en unos minutos"});
         const result = await connection.query(
-            "INSERT INTO reparaciones_telefonos (idTelefono, titulo, descripcion, fecha) VALUES (?,?,?,?);",
+            "INSERT INTO reparaciones_telefonos (idTelefono, titulo, descripcion, fecha) VALUES (?,?,?,'?');",
             [idTelefono, titulo, descripcion, fecha]
         )
         return res.status(201).json({create: result});
